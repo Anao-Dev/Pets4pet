@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pets4Pet — O portal completo para cuidar do seu pet com amor. Serviços veterinários, adoção, produtos e muito mais." />
+  <meta name="keywords" content="pets, animais, veterinário, adoção, petshop, cuidados com animais" />
+  <meta property="og:title" content="Pets4Pet — Tudo para o seu melhor amigo" />
+  <meta property="og:description" content="O portal mais completo para tutores que amam seus pets." />
+  <meta property="og:type" content="website" />
+  <title>Pets4Pet — Tudo para o seu melhor amigo</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+
+  <!-- Skip to main content (Accessibility) -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="p4p-header" role="banner">
+    <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+      <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand p4p-logo" href="/" aria-label="Pets4Pet — Página inicial">
+          <span class="logo-pets">Pets</span><span class="logo-4">4</span><span class="logo-pet">Pet</span>
+          <span class="logo-tagline">Portal</span>
+        </a>
+
+        <!-- Mobile toggle -->
+        <button class="navbar-toggler p4p-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarMain"
+          aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menu">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav me-auto ms-4 gap-1">
+            <li class="nav-item">
+              <a class="nav-link p4p-nav-link" href="#servicos">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p4p-nav-link" href="#destaques">Destaques</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p4p-nav-link" href="#depoimentos">Depoimentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p4p-nav-link" href="#contato">Contato</a>
+            </li>
+          </ul>
+
+          <!-- Auth buttons -->
+          <div class="d-flex align-items-center gap-3">
+            <a href="#entrar" class="btn p4p-btn-ghost" aria-label="Entrar na sua conta">
+              <i class="bi bi-person me-1"></i> Entrar
+            </a>
+            <a href="#cadastrar" class="btn p4p-btn-primary" aria-label="Criar uma conta gratuita">
+              <i class="bi bi-heart-fill me-1"></i> Cadastrar
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main id="main-content">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="p4p-hero" aria-labelledby="hero-title">
+      <div class="hero-bg-orbs" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+      </div>
+
+      <div class="container">
+        <div class="row align-items-center min-vh-hero">
+
+          <!-- Hero text -->
+          <div class="col-lg-6 hero-content" data-animate="fade-up">
+            <span class="p4p-badge">
+              <i class="bi bi-patch-check-fill me-1"></i> Plataforma #1 para tutores
+            </span>
+            <h1 id="hero-title" class="p4p-hero-title">
+              Seu pet merece<br/>
+              <span class="highlight-yellow">o melhor cuidado</span><br/>
+              do mundo. 🐾
+            </h1>
+            <p class="p4p-hero-sub">
+              Conectamos tutores a veterinários, petshops, adestradores e serviços de adoção — tudo num portal inteligente feito com amor animal.
+            </p>
+
+            <!-- Search bar -->
+            <div class="p4p-search-wrap" role="search" aria-label="Buscar serviços">
+              <div class="p4p-search-box">
+                <i class="bi bi-search search-icon" aria-hidden="true"></i>
+                <input
+                  type="search"
+                  class="p4p-search-input"
+                  placeholder="Busque veterinários, petshops, serviços…"
+                  aria-label="Buscar serviços para seu pet"
+                />
+                <button class="p4p-btn-search" aria-label="Pesquisar">
+                  Buscar
+                </button>
+              </div>
+              <div class="search-tags" aria-label="Buscas populares">
+                <span class="tag-label">Popular:</span>
+                <button class="p4p-tag" type="button">Veterinário</button>
+                <button class="p4p-tag" type="button">Banho e Tosa</button>
+                <button class="p4p-tag" type="button">Adoção</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero visual -->
+          <div class="col-lg-6 hero-visual-col d-none d-lg-flex" data-animate="fade-left">
+            <div class="hero-card-stack" aria-hidden="true">
+
+              <!-- Floating stat cards -->
+              <div class="hero-stat-card card-blue">
+                <i class="bi bi-people-fill"></i>
+                <div>
+                  <strong>+48.000</strong>
+                  <span>Tutores ativos</span>
+                </div>
+              </div>
+
+              <div class="hero-stat-card card-yellow">
+                <i class="bi bi-star-fill"></i>
+                <div>
+                  <strong>4.9 / 5.0</strong>
+                  <span>Avaliação média</span>
+                </div>
+              </div>
+
+              <div class="hero-stat-card card-green">
+                <i class="bi bi-shield-check-fill"></i>
+                <div>
+                  <strong>100%</strong>
+                  <span>Serviços verificados</span>
+                </div>
+              </div>
+
+              <!-- Central illustration -->
+              <div class="hero-illustration-hub">
+                <i class="bi bi-house-heart-fill hub-icon"></i>
+                <span class="hub-label">Pets4Pet Hub</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS BAR ===== -->
+    <section class="p4p-stats-bar" aria-label="Números do portal">
+      <div class="container">
+        <div class="row g-4 justify-content-center text-center">
+          <div class="col-6 col-md-3" data-animate="fade-up" data-delay="0">
+            <div class="stat-item">
+              <i class="bi bi-hospital-fill stat-icon"></i>
+              <strong class="stat-number" data-target="3200">0</strong>
+              <span class="stat-label">Clínicas Parceiras</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-animate="fade-up" data-delay="100">
+            <div class="stat-item">
+              <i class="bi bi-bag-heart-fill stat-icon"></i>
+              <strong class="stat-number" data-target="12500">0</strong>
+              <span class="stat-label">Produtos Disponíveis</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-animate="fade-up" data-delay="200">
+            <div class="stat-item">
+              <i class="bi bi-heart-fill stat-icon"></i>
+              <strong class="stat-number" data-target="9800">0</strong>
+              <span class="stat-label">Adoções Realizadas</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-animate="fade-up" data-delay="300">
+            <div class="stat-item">
+              <i class="bi bi-award-fill stat-icon"></i>
+              <strong class="stat-number" data-target="98">0</strong>
+              <span class="stat-label">% Satisfação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section class="p4p-section p4p-services" id="servicos" aria-labelledby="services-title">
+      <div class="container">
+
+        <div class="section-header text-center" data-animate="fade-up">
+          <span class="p4p-section-tag">O que oferecemos</span>
+          <h2 id="services-title" class="p4p-section-title">Nossos Serviços</h2>
+          <p class="p4p-section-sub">Tudo que seu pet precisa, num único lugar confiável.</p>
+        </div>
+
+        <div class="row g-4 mt-2">
+
+          <div class="col-sm-6 col-lg-4" data-animate="fade-up" data-delay="0">
+            <article class="p4p-service-card">
+              <div class="service-icon-wrap icon-blue">
+                <i class="bi bi-clipboard2-pulse-fill" aria-hidden="true"></i>
+              </div>
+              <h3 class="service-title">Consultas Veterinárias</h3>
+              <p class="service-desc">Agende consultas presenciais ou teleconsultas com veterinários certificados perto de você.</p>
+              <a href="#" class="service-cta">Agendar agora <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-animate="fade-up" data-delay="100">
+            <article class="p4p-service-card service-card-featured">
+              <div class="service-featured-badge">Mais buscado</div>
+              <div class="service-icon-wrap icon-yellow">
+                <i class="bi bi-scissors" aria-hidden="true"></i>
+              </div>
+              <h3 class="service-title">Banho & Tosa</h3>
+              <p class="service-desc">Petshops e profissionais certificados a domicílio ou no estabelecimento — com avaliações reais.</p>
+              <a href="#" class="service-cta">Encontrar profissionais <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-animate="fade-up" data-delay="200">
+            <article class="p4p-service-card">
+              <div class="service-icon-wrap icon-green">
+                <i class="bi bi-heart-fill" aria-hidden="true"></i>
+              </div>
+              <h3 class="service-title">Adoção Responsável</h3>
+              <p class="service-desc">Conecte-se a abrigos e ONGs parceiras para adotar ou ajudar pets que precisam de um lar.</p>
+              <a href="#" class="service-cta">Ver disponíveis <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-animate="fade-up" data-delay="300">
+            <article class="p4p-service-card">
+              <div class="service-icon-wrap icon-blue">
+                <i class="bi bi-house-fill" aria-hidden="true"></i>
+              </div>
+              <h3 class="service-title">Hotel para Pets</h3>
+              <p class="service-desc">Hospedagem segura e confortável para quando você precisar viajar sem seu companheiro.</p>
+              <a href="#" class="service-cta">Reservar estadia <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-animate="fade-up" data-delay="400">
+            <article class="p4p-service-card">
+              <div class="service-icon-wrap icon-yellow">
+                <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
+              </div>
+              <h3 class="service-title">Adestramento</h3>
+              <p class="service-desc">Treinadores especializados com métodos positivos para cães, gatos e animais exóticos.</p>
+              <a href="#" class="service-cta">Encontrar adestrador <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-animate="fade-up" data-delay="500">
+            <article class="p4p-service-card">
+              <div class="service-icon-wrap icon-green">
+                <i class="bi bi-bag-fill" aria-hidden="true"></i>
+              </div>
+              <h3 class="service-title">Loja Online</h3>
+              <p class="service-desc">Alimentos premium, acessórios e medicamentos com entrega rápida diretamente na sua porta.</p>
+              <a href="#" class="service-cta">Ir para a loja <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DESTAQUES ===== -->
+    <section class="p4p-section p4p-highlights" id="destaques" aria-labelledby="highlights-title">
+      <div class="container">
+
+        <div class="section-header text-center" data-animate="fade-up">
+          <span class="p4p-section-tag">Em destaque</span>
+          <h2 id="highlights-title" class="p4p-section-title">Destaques da Semana</h2>
+          <p class="p4p-section-sub">Os serviços e produtos mais amados pela nossa comunidade.</p>
+        </div>
+
+        <div class="row g-4 mt-2">
+
+          <div class="col-md-6 col-xl-3" data-animate="fade-up" data-delay="0">
+            <article class="p4p-highlight-card">
+              <div class="highlight-thumb highlight-vet">
+                <i class="bi bi-person-badge-fill"></i>
+                <span class="highlight-category">Veterinário</span>
+              </div>
+              <div class="highlight-body">
+                <h4 class="highlight-name">Dr. Carlos Mendes</h4>
+                <p class="highlight-location"><i class="bi bi-geo-alt-fill"></i> São Paulo, SP</p>
+                <div class="highlight-rating" aria-label="Avaliação: 5 de 5 estrelas">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span>(312)</span>
+                </div>
+                <button class="p4p-btn-card" type="button">Ver perfil</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-3" data-animate="fade-up" data-delay="100">
+            <article class="p4p-highlight-card highlight-card-featured">
+              <div class="highlight-thumb highlight-shop">
+                <i class="bi bi-bag-heart-fill"></i>
+                <span class="highlight-category">Petshop</span>
+              </div>
+              <div class="highlight-body">
+                <h4 class="highlight-name">PetLuxe Store</h4>
+                <p class="highlight-location"><i class="bi bi-geo-alt-fill"></i> Rio de Janeiro, RJ</p>
+                <div class="highlight-rating" aria-label="Avaliação: 5 de 5 estrelas">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span>(580)</span>
+                </div>
+                <button class="p4p-btn-card btn-card-yellow" type="button">Ver perfil</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-3" data-animate="fade-up" data-delay="200">
+            <article class="p4p-highlight-card">
+              <div class="highlight-thumb highlight-hotel">
+                <i class="bi bi-house-heart-fill"></i>
+                <span class="highlight-category">Hotel Pet</span>
+              </div>
+              <div class="highlight-body">
+                <h4 class="highlight-name">PetResort Premium</h4>
+                <p class="highlight-location"><i class="bi bi-geo-alt-fill"></i> Curitiba, PR</p>
+                <div class="highlight-rating" aria-label="Avaliação: 4 de 5 estrelas">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span>(214)</span>
+                </div>
+                <button class="p4p-btn-card" type="button">Ver perfil</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-3" data-animate="fade-up" data-delay="300">
+            <article class="p4p-highlight-card">
+              <div class="highlight-thumb highlight-trainer">
+                <i class="bi bi-award-fill"></i>
+                <span class="highlight-category">Adestramento</span>
+              </div>
+              <div class="highlight-body">
+                <h4 class="highlight-name">Ana Paula Trainer</h4>
+                <p class="highlight-location"><i class="bi bi-geo-alt-fill"></i> Belo Horizonte, MG</p>
+                <div class="highlight-rating" aria-label="Avaliação: 5 de 5 estrelas">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span>(187)</span>
+                </div>
+                <button class="p4p-btn-card" type="button">Ver perfil</button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="p4p-cta-banner" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-inner" data-animate="fade-up">
+          <div class="cta-text">
+            <h2 id="cta-title">Você é um profissional ou petshop?</h2>
+            <p>Cadastre seu negócio e alcance milhares de tutores que estão buscando exatamente o que você oferece.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="#" class="btn p4p-btn-white">
+              <i class="bi bi-shop me-2"></i>Cadastrar meu negócio
+            </a>
+            <a href="#" class="btn p4p-btn-outline-white">
+              Saiba mais <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="p4p-section p4p-testimonials" id="depoimentos" aria-labelledby="testimonials-title">
+      <div class="container">
+
+        <div class="section-header text-center" data-animate="fade-up">
+          <span class="p4p-section-tag">Comunidade</span>
+          <h2 id="testimonials-title" class="p4p-section-title">O que dizem os tutores</h2>
+          <p class="p4p-section-sub">Histórias reais de quem cuida com a Pets4Pet.</p>
+        </div>
+
+        <div class="row g-4 mt-2">
+
+          <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="0">
+            <blockquote class="p4p-testimonial-card">
+              <div class="testimonial-stars" aria-label="5 estrelas">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-text">"Encontrei uma veterinária incrível em 10 minutos. Minha Luna agradece! A plataforma é muito fácil de usar e os profissionais são top."</p>
+              <footer class="testimonial-author">
+                <div class="author-avatar avatar-blue">
+                  <i class="bi bi-person-fill"></i>
+                </div>
+                <div>
+                  <cite class="author-name">Mariana Souza</cite>
+                  <span class="author-pet">Tutora da Luna 🐕</span>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="100">
+            <blockquote class="p4p-testimonial-card testimonial-card-featured">
+              <div class="testimonial-stars" aria-label="5 estrelas">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-text">"Adotei meu gato Thor aqui. O processo foi simples, seguro e a ONG parceira foi maravilhosa. Recomendo para todos os tutores!"</p>
+              <footer class="testimonial-author">
+                <div class="author-avatar avatar-yellow">
+                  <i class="bi bi-person-fill"></i>
+                </div>
+                <div>
+                  <cite class="author-name">Rafael Costa</cite>
+                  <span class="author-pet">Tutor do Thor 🐈</span>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-animate="fade-up" data-delay="200">
+            <blockquote class="p4p-testimonial-card">
+              <div class="testimonial-stars" aria-label="5 estrelas">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-text">"Meu negócio cresceu 3x depois que me cadastrei. As avaliações dos clientes ajudam muito na visibilidade. Plataforma excelente!"</p>
+              <footer class="testimonial-author">
+                <div class="author-avatar avatar-green">
+                  <i class="bi bi-shop-window"></i>
+                </div>
+                <div>
+                  <cite class="author-name">Juliana Ferreira</cite>
+                  <span class="author-pet">Proprietária — PawsGrooming</span>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO / NEWSLETTER ===== -->
+    <section class="p4p-section p4p-newsletter" id="contato" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="newsletter-inner" data-animate="fade-up">
+          <i class="bi bi-envelope-heart-fill newsletter-icon" aria-hidden="true"></i>
+          <h2 id="newsletter-title">Fique por dentro de tudo</h2>
+          <p>Receba dicas de saúde animal, promoções e novidades direto no seu e-mail.</p>
+          <div class="newsletter-form" role="form" aria-label="Formulário de newsletter">
+            <label for="newsletter-email" class="visually-hidden">Seu melhor e-mail</label>
+            <input
+              type="email"
+              id="newsletter-email"
+              class="newsletter-input"
+              placeholder="Seu melhor e-mail"
+              aria-required="true"
+            />
+            <button class="btn p4p-btn-primary newsletter-submit" type="button" id="newsletter-btn">
+              <i class="bi bi-send-fill me-1"></i> Quero receber!
+            </button>
+          </div>
+          <p class="newsletter-privacy">
+            <i class="bi bi-lock-fill me-1"></i>
+            Seus dados estão seguros. Nada de spam, prometemos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="p4p-footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-lg-4">
+          <a class="p4p-logo footer-logo" href="/" aria-label="Pets4Pet — Página inicial">
+            <span class="logo-pets">Pets</span><span class="logo-4">4</span><span class="logo-pet">Pet</span>
+          </a>
+          <p class="footer-about">O portal mais completo para tutores que amam seus pets. Conectando cuidado, saúde e amor animal.</p>
+          <div class="footer-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram Pets4Pet"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook Pets4Pet"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="TikTok Pets4Pet"><i class="bi bi-tiktok"></i></a>
+            <a href="#" aria-label="YouTube Pets4Pet"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-col-title">Serviços</h3>
+          <ul class="footer-links">
+            <li><a href="#">Veterinários</a></li>
+            <li><a href="#">Banho & Tosa</a></li>
+            <li><a href="#">Adoção</a></li>
+            <li><a href="#">Hotel Pet</a></li>
+            <li><a href="#">Adestramento</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-col-title">Empresa</h3>
+          <ul class="footer-links">
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Para empresas</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Imprensa</a></li>
+            <li><a href="#">Carreiras</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h3 class="footer-col-title">Contato</h3>
+          <address class="footer-contact">
+            <p><i class="bi bi-envelope-fill me-2"></i>contato@pets4pet.com.br</p>
+            <p><i class="bi bi-whatsapp me-2"></i>(11) 9 0000-0000</p>
+            <p><i class="bi bi-geo-alt-fill me-2"></i>São Paulo, Brasil</p>
+          </address>
+        </div>
+
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pets4Pet Portal. Todos os direitos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Termos de Uso</a>
+          <a href="#">Privacidade</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="p4p-toast" id="toast" role="alert" aria-live="polite" aria-atomic="true">
+    <i class="bi bi-check-circle-fill toast-icon"></i>
+    <span id="toast-msg">Ação realizada com sucesso!</span>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
