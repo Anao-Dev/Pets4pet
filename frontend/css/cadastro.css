@@ -1,0 +1,461 @@
+/* ============================================================
+   PETS4PET — cadastro.css
+   Estilos exclusivos da página de cadastro.
+   Depende das variáveis definidas em style.css.
+   ============================================================ */
+
+/* ─── BODY ───────────────────────────────────────────────── */
+.cad-body {
+  background:
+    radial-gradient(ellipse 70% 60% at 90% 20%, rgba(184,216,200,0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 5% 90%,  rgba(27,75,107,0.08)   0%, transparent 55%),
+    linear-gradient(160deg, var(--off-white) 0%, var(--sage-xlight) 55%, #E8F4F0 100%);
+  min-height: 100vh;
+}
+
+/* ─── HEADER EXTRA ───────────────────────────────────────── */
+.cad-header-text {
+  font-size: 0.85rem; color: var(--gray-400); font-weight: 500;
+}
+
+/* ─── MAIN WRAPPER ───────────────────────────────────────── */
+.cad-main {
+  padding-top: 90px;
+  position: relative; overflow: hidden;
+}
+.cad-orbs { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+
+.min-vh-cad {
+  min-height: calc(100vh - 90px);
+  padding: 2.5rem 0;
+  gap: 0;
+}
+
+/* ─── BRAND COLUMN (LEFT) ────────────────────────────────── */
+.cad-brand-col {
+  position: relative; z-index: 2;
+  align-items: center; justify-content: flex-end;
+  padding-right: 3rem;
+}
+.cad-brand-inner {
+  max-width: 440px;
+  width: 100%;
+  padding: 2rem 0;
+}
+.cad-brand-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: linear-gradient(135deg, rgba(27,75,107,0.10), rgba(27,75,107,0.05));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(27,75,107,0.15);
+  color: var(--petroleum); font-size: 0.8rem; font-weight: 600;
+  padding: 0.4rem 1rem; border-radius: var(--radius-pill);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(27,75,107,0.10);
+}
+.cad-brand-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  font-weight: 900; color: var(--text-dark);
+  line-height: 1.2; margin-bottom: 1rem;
+}
+.cad-brand-sub {
+  font-size: 1rem; color: var(--gray-600);
+  line-height: 1.7; margin-bottom: 2rem; max-width: 400px;
+}
+
+/* Benefits list */
+.cad-benefits {
+  list-style: none; display: flex; flex-direction: column; gap: 1rem;
+  margin-bottom: 2rem; padding: 0;
+}
+.cad-benefit {
+  display: flex; align-items: flex-start; gap: 1rem;
+}
+.benefit-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+.benefit-icon.icon-blue   { background: linear-gradient(145deg, #C8E0F0, #A0C8E8); color: var(--petroleum); }
+.benefit-icon.icon-yellow { background: linear-gradient(145deg, var(--yellow-light), #EEB800); color: #6B4A00; }
+.benefit-icon.icon-green  { background: linear-gradient(145deg, var(--sage-light), var(--sage)); color: #2D6B50; }
+.benefit-icon::after {
+  /* inner glow */
+  content: none;
+}
+.cad-benefit > div strong {
+  display: block; font-size: 0.9rem; font-weight: 700; color: var(--text-dark);
+}
+.cad-benefit > div span {
+  font-size: 0.8rem; color: var(--gray-400);
+}
+
+/* Social proof */
+.cad-social-proof {
+  display: flex; align-items: center; gap: 0.85rem;
+}
+.proof-avatars {
+  display: flex; align-items: center;
+}
+.proof-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; border: 2px solid var(--white);
+  margin-left: -8px; box-shadow: 0 2px 6px rgba(27,75,107,0.15);
+}
+.proof-avatar:first-child { margin-left: 0; }
+.proof-avatar.avatar-blue   { background: linear-gradient(145deg, var(--petroleum-xlight), var(--petroleum)); color: white; }
+.proof-avatar.avatar-yellow { background: linear-gradient(145deg, var(--yellow-light), var(--yellow-dark)); color: var(--petroleum-dark); }
+.proof-avatar.avatar-green  { background: linear-gradient(145deg, var(--sage), var(--sage-dark)); color: #1A4A35; }
+.proof-more {
+  margin-left: 8px; font-size: 0.78rem; font-weight: 700;
+  color: var(--petroleum-light);
+}
+.cad-social-proof p {
+  font-size: 0.82rem; color: var(--gray-400); margin: 0; line-height: 1.4;
+}
+
+/* ─── FORM COLUMN (RIGHT) ────────────────────────────────── */
+.cad-form-col {
+  position: relative; z-index: 2;
+  display: flex; align-items: flex-start; justify-content: flex-start;
+  padding-top: 0; padding-bottom: 2rem;
+}
+.cad-form-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2.25rem;
+  width: 100%;
+  max-width: 560px;
+  border: 1.5px solid var(--gray-100);
+  box-shadow:
+    0 4px 8px rgba(27,75,107,0.06),
+    0 12px 32px rgba(27,75,107,0.10),
+    0 32px 72px rgba(27,75,107,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+  position: relative; overflow: hidden;
+}
+.cad-form-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--petroleum-light) 0%, var(--yellow) 50%, var(--sage-dark) 100%);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.cad-form-header { margin-bottom: 1.75rem; }
+.cad-form-logo-wrap { margin-bottom: 1rem; }
+.cad-inner-logo { font-size: 1.4rem; }
+.cad-form-title {
+  font-size: 1.6rem; font-weight: 800; color: var(--text-dark); margin-bottom: 0.3rem;
+}
+.cad-form-sub { font-size: 0.88rem; color: var(--gray-400); margin: 0; }
+
+/* ─── TIPO DE CONTA ──────────────────────────────────────── */
+.cad-tipo-group { margin-bottom: 1.75rem; }
+.cad-tipo-options {
+  display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;
+}
+.cad-tipo-opt {
+  flex: 1; min-width: 90px;
+  display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
+  padding: 0.85rem 0.6rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--gray-100);
+  background: var(--gray-50);
+  cursor: pointer;
+  transition: all var(--t-mid) var(--ease-spring);
+  text-align: center;
+  box-shadow: 0 2px 0 var(--gray-200), 0 3px 8px rgba(27,75,107,0.06), inset 0 1px 0 rgba(255,255,255,0.7);
+  user-select: none;
+}
+.cad-tipo-opt:hover {
+  border-color: rgba(27,75,107,0.20);
+  background: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 var(--gray-200), 0 6px 16px rgba(27,75,107,0.10), inset 0 1px 0 rgba(255,255,255,0.9);
+}
+.cad-tipo-active,
+.cad-tipo-opt.cad-tipo-active {
+  border-color: var(--petroleum);
+  background: linear-gradient(160deg, rgba(27,75,107,0.06), rgba(27,75,107,0.03));
+  box-shadow: 0 4px 0 var(--petroleum-dark), 0 6px 16px rgba(27,75,107,0.20), inset 0 1px 0 rgba(255,255,255,0.5);
+  transform: translateY(-1px);
+}
+.tipo-icon {
+  font-size: 1.4rem; color: var(--gray-400);
+  transition: color var(--t-fast);
+}
+.cad-tipo-active .tipo-icon { color: var(--petroleum); }
+.tipo-label {
+  font-size: 0.8rem; font-weight: 700; color: var(--text-dark); line-height: 1.2;
+}
+.tipo-desc {
+  font-size: 0.68rem; color: var(--gray-400); line-height: 1.2;
+}
+
+/* ─── FIELDS ─────────────────────────────────────────────── */
+.cad-field-wrap { display: flex; flex-direction: column; }
+.cad-field-label {
+  font-size: 0.82rem; font-weight: 600; color: var(--text-dark);
+  margin-bottom: 0.4rem; display: block;
+}
+.cad-required { color: #E53E3E; }
+.cad-optional { font-size: 0.75rem; font-weight: 400; color: var(--gray-400); margin-left: 0.25rem; }
+
+.cad-input-box {
+  display: flex; align-items: center;
+  background: var(--gray-50);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 0 1rem;
+  gap: 0.65rem;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05), 0 1px 0 rgba(255,255,255,0.8);
+}
+.cad-input-box:focus-within {
+  background: var(--white);
+  border-color: var(--petroleum-xlight);
+  box-shadow:
+    inset 0 2px 4px rgba(0,0,0,0.04),
+    0 0 0 3px rgba(27,75,107,0.12),
+    0 2px 8px rgba(27,75,107,0.10);
+}
+.cad-input-box.is-valid {
+  border-color: var(--sage-dark);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.04), 0 0 0 3px rgba(140,191,170,0.25);
+}
+.cad-input-box.is-error {
+  border-color: #E53E3E;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.04), 0 0 0 3px rgba(229,62,62,0.18);
+}
+
+.cad-input-icon { color: var(--gray-400); font-size: 1rem; flex-shrink: 0; pointer-events: none; }
+.cad-input-box:focus-within .cad-input-icon { color: var(--petroleum-xlight); }
+
+.cad-input {
+  flex: 1; border: none; outline: none;
+  font-family: var(--font); font-size: 0.9rem;
+  color: var(--text-body); background: transparent;
+  padding: 0.75rem 0;
+  min-width: 0;
+}
+.cad-input::placeholder { color: var(--gray-400); }
+
+.cad-input-status {
+  font-size: 1rem; flex-shrink: 0;
+  transition: all var(--t-fast);
+}
+.cad-input-status.status-ok   { color: var(--sage-dark); }
+.cad-input-status.status-err  { color: #E53E3E; }
+
+/* Toggle password */
+.cad-toggle-pw {
+  background: none; border: none; cursor: pointer;
+  color: var(--gray-400); font-size: 1rem; padding: 0.25rem; flex-shrink: 0;
+  transition: color var(--t-fast);
+  border-radius: var(--radius-sm);
+}
+.cad-toggle-pw:hover  { color: var(--petroleum); }
+.cad-toggle-pw:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+
+/* Field error */
+.cad-field-error {
+  font-size: 0.76rem; color: #C53030; font-weight: 500;
+  margin-top: 0.3rem; min-height: 1em;
+  display: flex; align-items: center; gap: 0.3rem;
+  opacity: 0; transform: translateY(-4px);
+  transition: opacity var(--t-fast), transform var(--t-fast);
+}
+.cad-field-error:not(:empty) { opacity: 1; transform: translateY(0); }
+.cad-field-error::before { content: '\F333'; font-family: 'bootstrap-icons'; font-size: 0.75rem; }
+
+/* ─── FORÇA DE SENHA ─────────────────────────────────────── */
+.cad-strength {
+  display: flex; align-items: center; gap: 0.5rem;
+  margin-top: 0.4rem; min-height: 20px;
+}
+.strength-bars {
+  display: flex; gap: 3px; flex: none;
+}
+.strength-bar {
+  width: 28px; height: 4px; border-radius: 2px;
+  background: var(--gray-200);
+  transition: background var(--t-mid);
+}
+.strength-bar.bar-weak   { background: #FC8181; }
+.strength-bar.bar-fair   { background: var(--yellow); }
+.strength-bar.bar-good   { background: #68D391; }
+.strength-bar.bar-strong { background: var(--sage-dark); }
+.strength-label {
+  font-size: 0.72rem; font-weight: 600; color: var(--gray-400);
+  transition: color var(--t-fast);
+}
+
+/* ─── REGRAS DE SENHA ────────────────────────────────────── */
+.cad-pw-rules {
+  list-style: none; padding: 0; margin: 0 0 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.35rem 1rem;
+}
+.pw-rule {
+  font-size: 0.75rem; color: var(--gray-400);
+  display: flex; align-items: center; gap: 0.3rem;
+  transition: color var(--t-fast);
+}
+.pw-rule i { font-size: 0.7rem; }
+.pw-rule.rule-ok {
+  color: var(--sage-dark);
+}
+.pw-rule.rule-ok i::before { content: '\F26A'; } /* bi-check-circle-fill */
+
+/* ─── CHECKBOX CUSTOM ────────────────────────────────────── */
+.cad-check-wrap { display: flex; flex-direction: column; }
+.cad-check-label {
+  display: flex; align-items: flex-start; gap: 0.65rem;
+  cursor: pointer; user-select: none;
+}
+.cad-check { position: absolute; opacity: 0; width: 0; height: 0; }
+.cad-check-box {
+  width: 20px; height: 20px; flex-shrink: 0;
+  border: 2px solid var(--gray-200);
+  border-radius: 5px;
+  background: var(--gray-50);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; color: transparent;
+  transition: all var(--t-fast);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.06), 0 1px 0 rgba(255,255,255,0.8);
+  margin-top: 1px;
+}
+.cad-check:checked + .cad-check-box {
+  background: linear-gradient(145deg, var(--petroleum-light), var(--petroleum-dark));
+  border-color: var(--petroleum-dark);
+  color: var(--white);
+  box-shadow: 0 3px 0 var(--petroleum-dark), 0 4px 8px rgba(27,75,107,0.30), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.cad-check:focus-visible + .cad-check-box {
+  outline: 2px solid var(--yellow); outline-offset: 2px;
+}
+.cad-check-label span:last-child {
+  font-size: 0.83rem; color: var(--gray-600); line-height: 1.5; padding-top: 1px;
+}
+.cad-link {
+  color: var(--petroleum-light); font-weight: 600;
+  text-decoration: underline; text-underline-offset: 2px;
+  transition: color var(--t-fast);
+}
+.cad-link:hover { color: var(--petroleum); }
+
+/* ─── SUBMIT BUTTON ──────────────────────────────────────── */
+.cad-submit-btn {
+  width: 100%; justify-content: center;
+  padding: 0.9rem 2rem !important;
+  font-size: 1rem !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow:
+    0 7px 0 var(--yellow-dark),
+    0 10px 20px rgba(212,168,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.35) !important;
+}
+.cad-submit-btn:hover {
+  box-shadow:
+    0 9px 0 var(--yellow-dark),
+    0 14px 28px rgba(212,168,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.40) !important;
+}
+.cad-submit-btn:disabled {
+  opacity: 0.7; cursor: not-allowed; transform: none !important;
+  box-shadow: 0 3px 0 var(--yellow-dark), 0 4px 10px rgba(212,168,0,0.25) !important;
+}
+.cad-submit-btn .spinner {
+  width: 16px; height: 16px; border: 2px solid rgba(15,46,66,0.3);
+  border-top-color: var(--petroleum-dark);
+  border-radius: 50%; animation: spin 0.7s linear infinite;
+  margin-right: 0.5rem;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ─── DIVIDER ────────────────────────────────────────────── */
+.cad-divider {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 1.5rem 0;
+  color: var(--gray-400); font-size: 0.8rem;
+}
+.cad-divider::before,
+.cad-divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--gray-100);
+}
+
+/* ─── SOCIAL BUTTONS ─────────────────────────────────────── */
+.cad-social-btns {
+  display: flex; gap: 0.75rem; margin-bottom: 1.5rem;
+}
+.cad-social-btn {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  gap: 0.5rem; padding: 0.65rem 1rem;
+  font-family: var(--font); font-size: 0.85rem; font-weight: 600;
+  color: var(--text-dark); cursor: pointer;
+  background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);
+  border: 1.5px solid var(--gray-200); border-radius: var(--radius-md);
+  box-shadow: 0 3px 0 var(--gray-200), 0 4px 8px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.9);
+  transition: all var(--t-fast);
+}
+.cad-social-btn:hover {
+  border-color: var(--gray-400);
+  box-shadow: 0 5px 0 var(--gray-200), 0 6px 16px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.9);
+  transform: translateY(-2px);
+}
+.cad-social-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--gray-200), inset 0 2px 4px rgba(0,0,0,0.08);
+}
+
+/* ─── LOGIN LINK ─────────────────────────────────────────── */
+.cad-login-link {
+  text-align: center; font-size: 0.85rem; color: var(--gray-400); margin: 0;
+}
+
+/* ─── SUCCESS OVERLAY ────────────────────────────────────── */
+.cad-success-overlay {
+  position: absolute; inset: 0;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1rem; text-align: center; padding: 2rem;
+  opacity: 0; pointer-events: none;
+  transform: scale(0.96);
+  transition: opacity var(--t-mid) var(--ease-out), transform var(--t-mid) var(--ease-spring);
+  z-index: 10;
+}
+.cad-success-overlay.show {
+  opacity: 1; pointer-events: auto; transform: scale(1);
+}
+.success-icon-wrap {
+  width: 80px; height: 80px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(145deg, var(--sage-light), var(--sage));
+  font-size: 2.5rem; color: #2D6B50;
+  box-shadow: 0 0 0 12px rgba(184,216,200,0.20), 0 8px 24px rgba(140,191,170,0.35);
+  animation: success-pop 0.5s var(--ease-spring);
+}
+@keyframes success-pop {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+.cad-success-overlay h3 {
+  font-size: 1.4rem; font-weight: 800; color: var(--text-dark);
+}
+.cad-success-overlay p { font-size: 0.9rem; color: var(--gray-600); max-width: 340px; }
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  .cad-form-col { justify-content: center; padding: 0 0 2rem; }
+  .min-vh-cad { padding: 1.5rem 0 3rem; }
+}
+@media (max-width: 575.98px) {
+  .cad-form-card { padding: 1.75rem 1.25rem; }
+  .cad-tipo-options { gap: 0.5rem; }
+  .cad-tipo-opt { min-width: 80px; padding: 0.7rem 0.4rem; }
+  .tipo-desc { display: none; }
+  .cad-social-btns { flex-direction: column; }
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pets4Pet — Crie sua conta gratuita e comece a cuidar do seu pet com o melhor da plataforma." />
+  <title>Cadastrar — Pets4Pet</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Shared tokens -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/cadastro.css" />
+</head>
+<body class="cad-body">
+
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- ── HEADER ─────────────────────────────────────────── -->
+  <header class="p4p-header" role="banner">
+    <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand p4p-logo" href="../index.html" aria-label="Pets4Pet — Página inicial">
+          <span class="logo-pets">Pets</span><span class="logo-4">4</span><span class="logo-pet">Pet</span>
+          <span class="logo-tagline">Portal</span>
+        </a>
+        <div class="ms-auto d-flex align-items-center gap-3">
+          <span class="cad-header-text">Já tem conta?</span>
+          <a href="./login.html" class="btn p4p-btn-ghost">
+            <i class="bi bi-person me-1"></i> Entrar
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── MAIN ───────────────────────────────────────────── -->
+  <main id="main-content" class="cad-main">
+
+    <!-- Orbs decorativos -->
+    <div class="cad-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center align-items-stretch min-vh-cad">
+
+        <!-- ── COLUNA ESQUERDA: branding ───────────────── -->
+        <div class="col-lg-5 d-none d-lg-flex cad-brand-col" data-animate="fade-up">
+          <div class="cad-brand-inner">
+
+            <div class="cad-brand-badge">
+              <i class="bi bi-patch-check-fill me-1"></i> Plataforma verificada
+            </div>
+
+            <h1 class="cad-brand-title">
+              Bem-vindo(a) à<br/>
+              <span class="highlight-yellow">maior comunidade</span><br/>
+              pet do Brasil 🐾
+            </h1>
+            <p class="cad-brand-sub">
+              Cadastre-se gratuitamente e tenha acesso a veterinários, petshops, adestradores e muito mais — tudo num só lugar.
+            </p>
+
+            <!-- Benefícios -->
+            <ul class="cad-benefits" aria-label="Benefícios do cadastro">
+              <li class="cad-benefit">
+                <span class="benefit-icon icon-blue"><i class="bi bi-shield-check-fill"></i></span>
+                <div>
+                  <strong>100% seguro e gratuito</strong>
+                  <span>Seus dados protegidos com criptografia</span>
+                </div>
+              </li>
+              <li class="cad-benefit">
+                <span class="benefit-icon icon-yellow"><i class="bi bi-lightning-fill"></i></span>
+                <div>
+                  <strong>Acesso imediato</strong>
+                  <span>Conecte-se a mais de 3.200 profissionais</span>
+                </div>
+              </li>
+              <li class="cad-benefit">
+                <span class="benefit-icon icon-green"><i class="bi bi-heart-fill"></i></span>
+                <div>
+                  <strong>Comunidade ativa</strong>
+                  <span>+48.000 tutores já fazem parte</span>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Avatares de tutores -->
+            <div class="cad-social-proof">
+              <div class="proof-avatars" aria-hidden="true">
+                <span class="proof-avatar avatar-blue"><i class="bi bi-person-fill"></i></span>
+                <span class="proof-avatar avatar-yellow"><i class="bi bi-person-fill"></i></span>
+                <span class="proof-avatar avatar-green"><i class="bi bi-person-fill"></i></span>
+                <span class="proof-avatar avatar-blue"><i class="bi bi-person-fill"></i></span>
+                <span class="proof-more">+48k</span>
+              </div>
+              <p>Junte-se a quem já ama o Pets4Pet</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── COLUNA DIREITA: formulário ──────────────── -->
+        <div class="col-lg-7 cad-form-col" data-animate="fade-left">
+          <div class="cad-form-card">
+
+            <!-- Cabeçalho do card -->
+            <div class="cad-form-header">
+              <div class="cad-form-logo-wrap d-lg-none">
+                <a href="/" class="p4p-logo cad-inner-logo">
+                  <span class="logo-pets">Pets</span><span class="logo-4">4</span><span class="logo-pet">Pet</span>
+                </a>
+              </div>
+              <h2 class="cad-form-title">Criar minha conta</h2>
+              <p class="cad-form-sub">Preencha os dados abaixo — leva menos de 1 minuto.</p>
+            </div>
+
+            <!-- ── TIPO DE CONTA ────────────────────────── -->
+            <div class="cad-tipo-group" role="group" aria-labelledby="tipo-label">
+              <span id="tipo-label" class="cad-field-label">Quero me cadastrar como:</span>
+              <div class="cad-tipo-options">
+                <label class="cad-tipo-opt cad-tipo-active">
+                  <input type="radio" name="tipo" value="tutor" checked class="visually-hidden" />
+                  <span class="tipo-icon"><i class="bi bi-person-heart"></i></span>
+                  <span class="tipo-label">Tutor</span>
+                  <span class="tipo-desc">Tenho pets</span>
+                </label>
+                <label class="cad-tipo-opt">
+                  <input type="radio" name="tipo" value="profissional" class="visually-hidden" />
+                  <span class="tipo-icon"><i class="bi bi-person-badge-fill"></i></span>
+                  <span class="tipo-label">Profissional</span>
+                  <span class="tipo-desc">Veterinário/Adestrador</span>
+                </label>
+                <label class="cad-tipo-opt">
+                  <input type="radio" name="tipo" value="petshop" class="visually-hidden" />
+                  <span class="tipo-icon"><i class="bi bi-shop-window"></i></span>
+                  <span class="tipo-label">Petshop</span>
+                  <span class="tipo-desc">Tenho um negócio</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- ── FORMULÁRIO ──────────────────────────── -->
+            <form id="cad-form" novalidate autocomplete="on">
+
+              <!-- Nome + Sobrenome -->
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <div class="cad-field-wrap">
+                    <label for="nome" class="cad-field-label">
+                      Nome <span class="cad-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="cad-input-box" id="box-nome">
+                      <i class="bi bi-person cad-input-icon" aria-hidden="true"></i>
+                      <input
+                        type="text" id="nome" name="nome"
+                        class="cad-input" placeholder="Seu nome"
+                        autocomplete="given-name"
+                        required minlength="2" maxlength="120"
+                        aria-required="true"
+                      />
+                    </div>
+                    <span class="cad-field-error" id="err-nome" role="alert"></span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="cad-field-wrap">
+                    <label for="sobrenome" class="cad-field-label">
+                      Sobrenome <span class="cad-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="cad-input-box" id="box-sobrenome">
+                      <i class="bi bi-person cad-input-icon" aria-hidden="true"></i>
+                      <input
+                        type="text" id="sobrenome" name="sobrenome"
+                        class="cad-input" placeholder="Seu sobrenome"
+                        autocomplete="family-name"
+                        required minlength="2" maxlength="120"
+                        aria-required="true"
+                      />
+                    </div>
+                    <span class="cad-field-error" id="err-sobrenome" role="alert"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- E-mail -->
+              <div class="cad-field-wrap mb-3">
+                <label for="email" class="cad-field-label">
+                  E-mail <span class="cad-required" aria-hidden="true">*</span>
+                </label>
+                <div class="cad-input-box" id="box-email">
+                  <i class="bi bi-envelope cad-input-icon" aria-hidden="true"></i>
+                  <input
+                    type="email" id="email" name="email"
+                    class="cad-input" placeholder="voce@email.com"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    aria-describedby="err-email"
+                  />
+                  <span class="cad-input-status" id="email-status" aria-hidden="true"></span>
+                </div>
+                <span class="cad-field-error" id="err-email" role="alert"></span>
+              </div>
+
+              <!-- Telefone -->
+              <div class="cad-field-wrap mb-3">
+                <label for="telefone" class="cad-field-label">
+                  Telefone / WhatsApp
+                  <span class="cad-optional">(opcional)</span>
+                </label>
+                <div class="cad-input-box" id="box-telefone">
+                  <i class="bi bi-whatsapp cad-input-icon" aria-hidden="true"></i>
+                  <input
+                    type="tel" id="telefone" name="telefone"
+                    class="cad-input" placeholder="(11) 9 0000-0000"
+                    autocomplete="tel"
+                    aria-describedby="err-telefone"
+                  />
+                </div>
+                <span class="cad-field-error" id="err-telefone" role="alert"></span>
+              </div>
+
+              <!-- Senha -->
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <div class="cad-field-wrap">
+                    <label for="senha" class="cad-field-label">
+                      Senha <span class="cad-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="cad-input-box" id="box-senha">
+                      <i class="bi bi-lock cad-input-icon" aria-hidden="true"></i>
+                      <input
+                        type="password" id="senha" name="senha"
+                        class="cad-input" placeholder="Mín. 8 caracteres"
+                        autocomplete="new-password"
+                        required minlength="8"
+                        aria-required="true"
+                        aria-describedby="senha-strength err-senha"
+                      />
+                      <button type="button" class="cad-toggle-pw" aria-label="Mostrar senha" data-target="senha">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                    <!-- Força da senha -->
+                    <div class="cad-strength" id="senha-strength" aria-live="polite">
+                      <div class="strength-bars">
+                        <span class="strength-bar" data-idx="0"></span>
+                        <span class="strength-bar" data-idx="1"></span>
+                        <span class="strength-bar" data-idx="2"></span>
+                        <span class="strength-bar" data-idx="3"></span>
+                      </div>
+                      <span class="strength-label" id="strength-label"></span>
+                    </div>
+                    <span class="cad-field-error" id="err-senha" role="alert"></span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="cad-field-wrap">
+                    <label for="confirmar_senha" class="cad-field-label">
+                      Confirmar senha <span class="cad-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="cad-input-box" id="box-confirmar">
+                      <i class="bi bi-lock-fill cad-input-icon" aria-hidden="true"></i>
+                      <input
+                        type="password" id="confirmar_senha" name="confirmar_senha"
+                        class="cad-input" placeholder="Repita a senha"
+                        autocomplete="new-password"
+                        required
+                        aria-required="true"
+                        aria-describedby="err-confirmar"
+                      />
+                      <button type="button" class="cad-toggle-pw" aria-label="Mostrar confirmação" data-target="confirmar_senha">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                    <span class="cad-field-error" id="err-confirmar" role="alert"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Regras de senha -->
+              <ul class="cad-pw-rules" aria-label="Requisitos da senha" id="pw-rules">
+                <li id="rule-len"  class="pw-rule"><i class="bi bi-circle" aria-hidden="true"></i> Mínimo 8 caracteres</li>
+                <li id="rule-upper" class="pw-rule"><i class="bi bi-circle" aria-hidden="true"></i> Uma letra maiúscula</li>
+                <li id="rule-num"  class="pw-rule"><i class="bi bi-circle" aria-hidden="true"></i> Um número</li>
+              </ul>
+
+              <!-- Termos -->
+              <div class="cad-check-wrap mb-4">
+                <label class="cad-check-label" for="aceitar_termos">
+                  <input type="checkbox" id="aceitar_termos" name="aceitar_termos" class="cad-check" required />
+                  <span class="cad-check-box" aria-hidden="true"><i class="bi bi-check-lg"></i></span>
+                  <span>
+                    Li e aceito os
+                    <a href="/termos.html" target="_blank" class="cad-link">Termos de Uso</a>
+                    e a
+                    <a href="/privacidade.html" target="_blank" class="cad-link">Política de Privacidade</a>
+                  </span>
+                </label>
+                <span class="cad-field-error" id="err-termos" role="alert"></span>
+              </div>
+
+              <!-- Newsletter opt-in -->
+              <div class="cad-check-wrap mb-4">
+                <label class="cad-check-label" for="newsletter">
+                  <input type="checkbox" id="newsletter" name="newsletter" class="cad-check" checked />
+                  <span class="cad-check-box" aria-hidden="true"><i class="bi bi-check-lg"></i></span>
+                  <span>Quero receber dicas de saúde animal e promoções por e-mail</span>
+                </label>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="btn p4p-btn-primary cad-submit-btn" id="cad-submit-btn">
+                <i class="bi bi-person-plus-fill me-2" aria-hidden="true"></i>
+                Criar minha conta gratuita
+              </button>
+
+              <!-- Divider -->
+              <div class="cad-divider" aria-hidden="true">
+                <span>ou cadastre-se com</span>
+              </div>
+
+              <!-- OAuth social (UI only) -->
+              <div class="cad-social-btns">
+                <button type="button" class="cad-social-btn" aria-label="Entrar com Google">
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                  </svg>
+                  Google
+                </button>
+                <button type="button" class="cad-social-btn" aria-label="Entrar com Facebook">
+                  <i class="bi bi-facebook" style="color:#1877F2;" aria-hidden="true"></i>
+                  Facebook
+                </button>
+              </div>
+
+              <p class="cad-login-link">
+                Já tem uma conta?
+                <a href="./login.html" class="cad-link">Fazer login</a>
+              </p>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Toast -->
+  <div class="p4p-toast" id="toast" role="alert" aria-live="polite" aria-atomic="true">
+    <i class="bi bi-check-circle-fill toast-icon"></i>
+    <span id="toast-msg">Ação realizada!</span>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Page JS -->
+  <script src="./js/cadastro.js"></script>
+</body>
+</html>

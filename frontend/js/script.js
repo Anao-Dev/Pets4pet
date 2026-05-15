@@ -251,32 +251,6 @@ const Toast = (() => {
   });
 })();
 
-/* ─── 10. AUTH BUTTONS ───────────────────────────────────── */
-(function initAuthButtons() {
-  const entrar = $('a[href="#entrar"]');
-  const cadastrar = $('a[href="#cadastrar"]');
-
-  entrar?.addEventListener('click', (e) => {
-    e.preventDefault();
-    Toast.show('👤 Módulo de login em breve!');
-  });
-
-  cadastrar?.addEventListener('click', (e) => {
-    e.preventDefault();
-    Toast.show('💛 Cadastro gratuito chegando em breve!');
-  });
-})();
-
-/* ─── 11. CTA BANNER BUTTONS ─────────────────────────────── */
-(function initCtaButtons() {
-  $$('.p4p-cta-banner .btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      Toast.show('🏪 Cadastro para empresas em breve!');
-    });
-  });
-})();
-
 /* ─── 12. MOBILE NAV — SMOOTH CLOSE ON LINK CLICK ───────── */
 (function initMobileNav() {
   const navCollapse = $('#navbarMain');
